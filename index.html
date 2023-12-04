@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="icon"
       type="image/png"
@@ -17,8 +23,8 @@
   <body>
     <section>
       <div class="container">
-        <div class="columns">
-          <div>
+        <div class="columns-container">
+          <div class="hero-section">
             <h1>10,000+ of our users love our products.</h1>
             <p>
               We only provide great products combined with excellent customer
@@ -29,88 +35,46 @@
           <div class="reviews">
             <div class="review-groups">
               <div class="stars">
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
               </div>
               <p>Rated 5 Stars in Reviews</p>
             </div>
             <div class="review-groups">
               <div class="stars">
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
               </div>
               <p>Rated 5 Stars in Report Guru</p>
             </div>
             <div class="review-groups">
               <div class="stars">
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
-                <img
-                  src="images/icon-star.svg"
-                  alt="star used for customer review"
-                />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
+                <img src="images/icon-star.svg" alt="star review" />
               </div>
               <p>Rated 5 Stars in BestTech</p>
             </div>
           </div>
         </div>
-        <div class="testimonials">
-          <div class="testinomial">
-            <div>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <div class="user">
               <div>
                 <img src="images/image-colton.jpg" alt="profile picture" />
               </div>
-              <div><h2>Colton Smith Verified Buyer</h2></div>
+              <div class="info">
+                <h2 class="name">Colton Smith</h2>
+                <h2 class="buyer">Verified Buyer</h2>
+              </div>
             </div>
             <div>
               <p>
@@ -120,12 +84,15 @@
               </p>
             </div>
           </div>
-          <div class="testinomial">
-            <div>
+          <div class="testimonial">
+            <div class="user">
               <div>
                 <img src="images/image-irene.jpg" alt="profile picture" />
               </div>
-              <div><h2>Irene Roberts Verified Buyer</h2></div>
+              <div class="info">
+                <h2 class="name">Irene Roberts</h2>
+                <h2 class="buyer">Verified Buyer</h2>
+              </div>
             </div>
             <div>
               <p>
@@ -135,17 +102,23 @@
               </p>
             </div>
           </div>
-          <div class="testinomial"></div>
-          <div>
-            <div><img src="images/image-anne.jpg" alt="profile picture" /></div>
-            <div><h2>Anne Wallace Verified Buyer</h2></div>
-          </div>
-          <div>
-            <p>
-              "Put an order with this company and can only praise them for the
-              very high standard. Will definitely use them again and recommend
-              them to everyone!"
-            </p>
+          <div class="testimonial">
+            <div class="user">
+              <div>
+                <img src="images/image-anne.jpg" alt="profile picture" />
+              </div>
+              <div class="info">
+                <h2 class="name">Anne Wallace</h2>
+                <h2 class="buyer">Verified Buyer</h2>
+              </div>
+            </div>
+            <div>
+              <p>
+                "Put an order with this company and can only praise them for the
+                very high standard. Will definitely use them again and recommend
+                them to everyone!"
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,279 @@
+:root {
+  --primary-color-800: hsl(300, 43%, 22%);
+  --primary-color-500: hsl(333, 80%, 67%);
+
+  --neutral-color-500: hsl(303, 10%, 53%);
+  --neutral-color-200: hsl(300, 24%, 96%);
+  --neutral-color-100: hsl(0, 0%, 100%);
+}
+
+/* // https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* general styling */
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1.5rem;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+  margin-top: 5.12rem;
+  margin-bottom: 6.19rem;
+}
+
+.columns-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.columns-container h1 {
+  color: var(--primary-color-800);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2rem; /* 80% */
+  letter-spacing: -0.08931rem;
+  margin-bottom: 1rem;
+}
+
+.columns-container p {
+  color: var(--neutral-color-500);
+  font-size: 1.1875rem;
+  font-weight: 500;
+  line-height: 1.5625rem; /* 131.579% */
+  letter-spacing: -0.03956rem;
+  margin-bottom: 2.44rem;
+}
+
+@media (min-width: 800px) {
+  body {
+    overflow: hidden;
+  }
+
+  .columns-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 4.44rem;
+    text-align: left;
+  }
+  .columns-container h1 {
+    font-size: 3.5rem;
+    line-height: 3rem; /* 80% */
+    letter-spacing: -0.125rem;
+  }
+
+  .columns-container p {
+    margin: 0;
+  }
+  .hero-section {
+    max-width: 27.815rem;
+  }
+}
+
+.reviews {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.review-groups {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.review-groups p {
+  color: var(--primary-color-800);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.stars {
+  display: flex;
+  column-gap: 3px;
+}
+
+@media (min-width: 800px) {
+  .reviews {
+    margin: 1.69rem 0 1.13rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 33.75rem;
+  }
+
+  .review-groups:nth-of-type(1) {
+    align-self: flex-start;
+    margin-right: 6rem;
+  }
+
+  .review-groups:nth-of-type(2) {
+    align-self: center;
+    margin-inline: 3rem;
+  }
+
+  .review-groups:nth-of-type(3) {
+    align-self: flex-end;
+    margin-left: 6rem;
+  }
+
+  .review-groups {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    margin: 0;
+    padding: 1.25rem 2.94rem 1.25rem 2rem;
+  }
+
+  .review-groups p {
+    color: var(--primary-color-800);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .stars {
+    margin-right: 2rem;
+    column-gap: 8px;
+  }
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.testimonial {
+  border-radius: 0.5rem;
+  background: var(--primary-color-800);
+  padding: 2.5rem 2rem;
+}
+
+.testimonial p {
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.375rem; /* 129.412% */
+  letter-spacing: -0.019rem;
+}
+
+.user {
+  display: flex;
+  column-gap: 1.44rem;
+  max-height: 2.5rem;
+  margin-bottom: 1.44rem;
+}
+
+.user img {
+  width: 2.5rem;
+  border-radius: 2.5rem;
+}
+
+.name,
+.buyer,
+.testimonial p {
+  font-size: 1.0625rem;
+}
+
+.info .name {
+  color: var(--neutral-color-100);
+  font-weight: 700;
+}
+
+.info .buyer {
+  color: var(--primary-color-500);
+  font-weight: 400;
+}
+
+@media (min-width: 800px) {
+  .testimonials-container {
+    flex-direction: row;
+    column-gap: 1.87rem;
+  }
+
+  .testimonial:nth-of-type(1) {
+    margin-bottom: 2rem;
+  }
+
+  .testimonial:nth-of-type(2) {
+    margin-block: 1rem;
+  }
+
+  .testimonial:nth-of-type(3) {
+    margin-top: 2rem;
+  }
+}
